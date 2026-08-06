@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="only light">
+<title>AI Without Fear | by Carol Trull Pittman</title>
+<meta name="description" content="Navigating Artificial Intelligence with Discernment and Confidence. Join the Founding Readers to get book updates, exclusive previews, and launch announcements.">
+<meta property="og:title" content="AI Without Fear">
+<meta property="og:description" content="Navigating Artificial Intelligence with Discernment and Confidence. A new book by Carol Trull Pittman.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Martian+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: only light;
+    --gold:#D7C300;
+    --gold-deep:#9C8E00;
+    --ink:#141311;
+    --ink-70:rgba(20,19,17,.72);
+    --ink-50:rgba(20,19,17,.5);
+    --ink-15:rgba(20,19,17,.15);
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--white);
+    color:var(--ink);
+    font-family:'Schibsted Grotesk',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+  .caslon-i{font-family:'Libre Caslon Text',serif;font-style:italic;font-weight:400}
+  .mono{font-family:'Martian Mono',monospace}
+
+  /* header */
+  header{padding:26px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1.5px solid var(--ink-15)}
+  .mark{font-weight:800;font-size:15px;letter-spacing:-.01em}
+  .mark .caslon-i{font-weight:400}
+  .chip{font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-deep)}
+
+  /* hero */
+  .hero{padding:76px 0 56px;text-align:left}
+  @media (max-width:640px){ .hero{padding:56px 0 44px} }
+  h1{
+    font-weight:800;
+    font-size:clamp(64px,11vw,124px);
+    line-height:.98;
+    letter-spacing:-.025em;
+  }
+  h1 .without{
+    font-family:'Libre Caslon Text',serif;
+    font-style:italic;
+    font-weight:400;
+    font-size:.86em;
+    letter-spacing:0;
+  }
+  h1 .fear{color:var(--gold)}
+  .subtitle{
+    margin-top:26px;
+    font-size:clamp(17px,2.3vw,21px);
+    line-height:1.55;
+    color:var(--ink-70);
+    max-width:440px;
+  }
+  .by{margin-top:20px;font-weight:700;font-size:17px}
+  .hero-cta{margin-top:34px;display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;
+    background:var(--ink);
+    color:var(--white);
+    text-decoration:none;
+    font-weight:700;
+    font-size:16px;
+    padding:16px 28px;
+    border-radius:10px;
+    transition:background .15s ease,transform .1s ease;
+  }
+  .btn:hover{background:#2A2823}
+  .btn:active{transform:scale(.98)}
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  .hero-note{font-family:'Martian Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-50)}
+
+  /* questions */
+  .questions{border-top:1.5px solid var(--ink-15);padding:64px 0}
+  .questions h2{font-family:'Libre Caslon Text',serif;font-weight:400;font-size:clamp(26px,4vw,36px);line-height:1.3}
+  .questions h2 .gold{color:var(--gold-deep)}
+  .lead{margin-top:18px;font-size:17px;color:var(--ink-70)}
+  .qlist{margin:22px 0;list-style:none}
+  .qlist li{
+    font-family:'Libre Caslon Text',serif;font-style:italic;
+    font-size:clamp(18px,2.6vw,23px);
+    line-height:1.7;
+    color:var(--ink);
+  }
+  .qlist li::before{content:"";display:inline-block;width:22px;height:2px;background:var(--gold);vertical-align:middle;margin-right:14px}
+  .human{font-weight:800;font-size:clamp(19px,2.8vw,24px);letter-spacing:-.01em;margin-top:26px}
+  .about{margin-top:22px;font-size:17px;line-height:1.65;color:var(--ink-70);max-width:640px}
+  .about em{font-family:'Libre Caslon Text',serif;color:var(--ink)}
+
+  /* signup */
+  .signup{padding:24px 0 72px}
+  .card{
+    border:2px solid var(--ink);
+    border-radius:18px;
+    padding:clamp(28px,5vw,48px);
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:44px;
+    align-items:center;
+  }
+  @media (max-width:800px){ .card{grid-template-columns:1fr;gap:26px} }
+  .card h2{font-family:'Libre Caslon Text',serif;font-weight:400;font-size:clamp(26px,3.6vw,34px);line-height:1.2}
+  .card .benefits{margin-top:16px;list-style:none}
+  .card .benefits li{font-size:16px;line-height:1.9;color:var(--ink-70)}
+  .card .benefits li::before{content:"\2713";color:var(--gold-deep);font-weight:800;margin-right:12px}
+  form{display:flex;flex-direction:column;gap:12px}
+  label{font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-50)}
+  input[type=text],input[type=email]{
+    width:100%;
+    background:var(--white);
+    border:2px solid var(--ink-15);
+    border-radius:10px;
+    padding:15px 16px;
+    color:var(--ink);
+    font-family:'Schibsted Grotesk',sans-serif;
+    font-size:16px;
+    transition:border-color .15s ease;
+  }
+  input::placeholder{color:var(--ink-50)}
+  input:focus-visible{outline:none;border-color:var(--gold-deep)}
+  button{
+    margin-top:4px;
+    background:var(--ink);
+    color:var(--white);
+    border:none;
+    border-radius:10px;
+    padding:16px 20px;
+    font-family:'Schibsted Grotesk',sans-serif;
+    font-weight:800;
+    font-size:16px;
+    cursor:pointer;
+    transition:background .15s ease,transform .1s ease;
+  }
+  button:hover{background:#2A2823}
+  button:active{transform:scale(.98)}
+  button:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+  button[disabled]{opacity:.6;cursor:wait}
+  .fine{font-family:'Martian Mono',monospace;font-size:10px;color:var(--ink-50);letter-spacing:.04em}
+  .msg{border-radius:10px;padding:13px 15px;font-size:15px;line-height:1.5;display:none}
+  .msg.err{display:block;background:rgba(215,60,30,.08);color:#A33417}
+  .done h3{font-family:'Libre Caslon Text',serif;font-weight:400;font-size:26px}
+  .done h3 .gold{color:var(--gold-deep)}
+  .done p{margin-top:10px;font-size:16px;line-height:1.6;color:var(--ink-70)}
+
+  footer{
+    border-top:1.5px solid var(--ink-15);
+    padding:30px 0 48px;
+    text-align:center;
+  }
+  .promise{
+    font-family:'Libre Caslon Text',serif;font-style:italic;
+    font-size:15px;color:var(--gold-deep);
+  }
+  .foot-meta{margin-top:14px;font-family:'Martian Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-50)}
+
+  @media (prefers-reduced-motion:no-preference){
+    .hero h1,.hero .subtitle,.hero .by,.hero .hero-cta{animation:rise .55s ease both}
+    .hero .subtitle{animation-delay:.08s}
+    .hero .by{animation-delay:.14s}
+    .hero .hero-cta{animation-delay:.2s}
+    @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark">AI <span class="caslon-i">Without</span> Fear</div>
+    <div class="chip">Coming Soon</div>
+  </header>
+
+  <section class="hero">
+    <h1>AI<br><span class="without">Without</span><br><span class="fear">Fear</span></h1>
+    <p class="subtitle">Navigating Artificial Intelligence with Discernment &amp; Confidence</p>
+    <div class="by">By Carol Trull Pittman</div>
+    <div class="hero-cta">
+      <a class="btn" href="#founding-readers">Join the Founding Readers</a>
+      <span class="hero-note">Free &middot; Be first to read it</span>
+    </div>
+  </section>
+
+  <section class="questions">
+    <h2>Artificial Intelligence is changing our world.<br><span class="gold">Fear doesn't have to.</span></h2>
+    <p class="lead">Everywhere I go, I hear the same questions.</p>
+    <ul class="qlist">
+      <li>Can I trust AI?</li>
+      <li>Will it replace human creativity?</li>
+      <li>How do I use it responsibly?</li>
+      <li>How do I help my family navigate it wisely?</li>
+    </ul>
+    <p class="human">These aren't technology questions. They're human questions.</p>
+    <p class="about"><em>AI Without Fear</em> explores how we can replace fear with understanding, hype with perspective, and uncertainty with thoughtful discernment. Because AI is a powerful tool, but it still requires human wisdom.</p>
+  </section>
+
+  <section class="signup" id="founding-readers">
+    <div class="card">
+      <div>
+        <h2>Become a <span style="font-style:italic">Founding Reader</span></h2>
+        <ul class="benefits">
+          <li>Book updates as the manuscript takes shape</li>
+          <li>Exclusive previews before anyone else</li>
+          <li>First to know the moment the book is released</li>
+        </ul>
+      </div>
+      <div id="formZone">
+        <form id="waitlistForm" novalidate>
+          <label for="firstName">First name</label>
+          <input type="text" id="firstName" name="firstName" placeholder="Jordan" autocomplete="given-name">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+          <input type="hidden" id="source" name="source" value="direct">
+          <button type="submit" id="submitBtn">Count me in</button>
+          <p class="fine">One launch email. No spam. Unsubscribe anytime.</p>
+          <div class="msg" id="formMsg" role="status" aria-live="polite"></div>
+        </form>
+        <div class="done" id="doneZone" style="display:none">
+          <h3>Welcome, Founding Reader. <span class="gold">You're in.</span></h3>
+          <p>Watch your inbox. You'll get previews as the book takes shape, and you'll know the moment it's released.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="promise">Helping people approach artificial intelligence with wisdom instead of fear.</p>
+    <p class="foot-meta">&copy; 2026 Carol Trull Pittman &middot; www.aiwithoutfear.com</p>
+  </footer>
+
+</div>
+
+<script>
+  // ====== CONFIG ======
+  // Paste the deployed Google Apps Script Web App URL here:
+  const SHEET_ENDPOINT = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+  // ====================
+
+  // Capture source tag from QR / links, e.g. ?src=postcard
+  (function(){
+    const p = new URLSearchParams(window.location.search).get("src");
+    if(p) document.getElementById("source").value = p.slice(0,50);
+  })();
+
+  const form = document.getElementById("waitlistForm");
+  const btn = document.getElementById("submitBtn");
+  const msg = document.getElementById("formMsg");
+
+  form.addEventListener("submit", async (e)=>{
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const firstName = document.getElementById("firstName").value.trim();
+    msg.className = "msg";
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+      msg.textContent = "That email doesn't look right. Give it another try.";
+      msg.className = "msg err";
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = "Adding you...";
+
+    try{
+      await fetch(SHEET_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {"Content-Type":"text/plain;charset=utf-8"},
+        body: JSON.stringify({
+          firstName: firstName,
+          email: email,
+          source: document.getElementById("source").value,
+          timestamp: new Date().toISOString()
+        })
+      });
+      document.getElementById("waitlistForm").style.display = "none";
+      document.getElementById("doneZone").style.display = "block";
+    }catch(err){
+      msg.textContent = "Something went wrong on our end. Refresh and try once more.";
+      msg.className = "msg err";
+      btn.disabled = false;
+      btn.textContent = "Count me in";
+    }
+  });
+</script>
+</body>
+</html>
